@@ -6,14 +6,14 @@ Visualization app that displays the solving process of four backtracking problem
 - N-Knights
 - Word-Search
 
-Click here for a <a target="_blank" href=""> DEMO </a>
+Click here for a <a target="_blank" href="https://shl-backtracking.netlify.app/"> DEMO </a>
 
 ## Setup
 
 Clone the repository
 
 ```
-$ git clone
+$ git clone https://github.com/shashankhl/BackTracking-Visualizer.git
 ```
 
 ```
