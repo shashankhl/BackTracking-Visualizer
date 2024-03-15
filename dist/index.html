@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="src/images/icon.png" />
+    <title>Backtrack Visualizer</title>
+  </head>
+  <body>
+    <script src="main.js" defer></script>
+    <div class="problem-container">
+      <div>
+        <select name="select-problem" id="select-problem">
+          <option value="N-Queens">N-Queens</option>
+          <option value="N-Knights">N-Knights</option>
+          <option value="Word-Search">Word Search</option>
+        </select>
+      </div>
+
+      <div
+        class="n-queens-container"
+        style="
+          display: grid;
+          grid-template: 1fr / 10fr 3fr;
+          align-items: center;
+          justify-items: center;
+        "
+      >
+        <div id="picker-and-board">
+          <div id="number-picker" style="margin-top: 1em">
+            <p id="number-value">Value: 4</p>
+            <input
+              id="no-of-queens"
+              type="range"
+              min="1"
+              max="9"
+              value="4"
+              step="1"
+            />
+            <button id="submit-queen-range">Solve</button>
+            <button id="stop-execution">Stop</button>
+            <select name="queen-speed" id="queen-speed">
+              <option value="Slow">Slow</option>
+              <option value="Medium">Medium</option>
+              <option value="Fast">Fast</option>
+            </select>
+          </div>
+          <div id="result"><h3>Total:</h3></div>
+          <div id="queen-board"></div>
+        </div>
+        <div id="solved-boards"></div>
+      </div>
+      <div class="n-knights-container" style="display: none">
+        <div id="picker-and-board">
+          <div id="number-picker" style="margin-top: 1em">
+            <p id="knight-number-value">Value: 4</p>
+            <input
+              id="no-of-knights"
+              type="range"
+              min="1"
+              max="6"
+              value="4"
+              step="1"
+            />
+            <button id="submit-knight-range">Solve</button>
+            <button id="stop-knight-execution">Stop</button>
+            <select name="knight-speed" id="knight-speed">
+              <option value="Slow">Slow</option>
+              <option value="Medium">Medium</option>
+              <option value="Fast">Fast</option>
+            </select>
+          </div>
+          <div id="knight-result"><h3>Total:</h3></div>
+          <div id="knight-board"></div>
+        </div>
+        <div id="knight-solved-boards"></div>
+      </div>
+
+      <div class="word-search-container" style="display: none">
+        <div id="board-controls">
+          <div>
+            <button id="generate-word-board">Generate Board</button>
+          </div>
+          <div>
+            <select name="search-speed" id="search-speed">
+              <option value="Slow">Slow</option>
+              <option value="Medium">Medium</option>
+              <option value="Fast">Fast</option>
+            </select>
+          </div>
+          <div id="search">
+            <input id="word-to-find" type="text" placeholder="Enter word" />
+            <button id="find-word">Find Word</button>
+            <button id="stop-search-execution">Stop</button>
+          </div>
+        </div>
+
+        <div id="search-board"></div>
+      </div>
+    </div>
+    <p class="copyright">
+      <a
+        class="twitter-link"
+        target="_blank"
+        href="http://www.linkedin.com/in/shashank-hl"
+        ><b>Shashank H L</b></a
+      >. "Backtracking is not just retracing steps; it's a journey through
+      possibilities, where each dead end illuminates the path to the solution."
+    </p>
+  </body>
+</html>

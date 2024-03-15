@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.problem-container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template: 1fr / 1fr 10fr;
+}
+
+.board-container div {
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+.board-container {
+  display: grid;
+  grid-template: repeat(9, 1fr) / repeat(9, 1fr);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.n-queens-container #picker-and-board,
+.n-knights-container #picker-and-board {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2em;
+}
+
+#queen-board,
+#knight-board {
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-image: url("http://www.wood-database.com/wp-content/uploads/bamboo-qs-sealed.jpg");
+  padding: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+#queen-board div,
+#knight-board div {
+  font-size: 3em;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#solved-board-div {
+  background-image: url("http://www.wood-database.com/wp-content/uploads/bamboo-qs-sealed.jpg");
+  width: 80%;
+}
+
+#solved-board-div div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+}
+
+#solved-boards,
+#knight-solved-boards {
+  overflow: auto;
+  box-shadow: -5px 0 5px -5px #333;
+  width: 120%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.word-search-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#search-board {
+  display: grid;
+  grid-template: repeat(12, 1fr) / repeat(12, 1fr);
+  grid-template-rows: auto;
+  width: 80%;
+  height: 80%;
+}
+#board-controls {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  gap: 1em;
+}
+
+#select-problem {
+  padding: 1em;
+  margin: 1em;
+  border: none;
+  background-color: rgb(236, 236, 236);
+}
+
+#board-controls button,
+.n-queens-container #picker-and-board button,
+.n-knights-container #picker-and-board button {
+  border: none;
+  background-color: rgb(35, 98, 233);
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+#board-controls input,
+#board-controls select,
+.n-queens-container #picker-and-board select,
+.n-knights-container #picker-and-board select {
+  border: none;
+  padding: 1em;
+  background-color: rgb(236, 236, 236);
+  border-radius: 1em;
+}
+#search-board div {
+  border: 1px solid rgb(202, 201, 201);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright {
+  margin-top: auto;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--color-dark--1);
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.twitter-link:link,
+.twitter-link:visited {
+  color: rgb(58, 21, 180);
+  transition: all 0.2s;
+}
+
+.twitter-link:hover,
+.twitter-link:active {
+  color: rgb(14, 160, 131);
+}
